@@ -1,17 +1,39 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Serendipia Gestion Clientes</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-searchbar placeholder="Busca al cliente"></ion-searchbar>
+  
+  <ion-card>
+    <ion-card-header>
+      Natalia Gimenez
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              678687698
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <span style="color:green;">12/10/2021</span>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <span style="color:orange;">Pendiente (50€)</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab bottom right >
+  <button ion-fab><ion-icon name="add"></ion-icon></button>
+</ion-fab>
 </ion-content>
