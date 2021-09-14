@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <ion-searchbar placeholder="Busca al cliente"></ion-searchbar>
-  
+
   <ion-card>
     <ion-card-header>
       Natalia Gimenez
@@ -33,7 +33,9 @@
       </ion-grid>
     </ion-card-content>
   </ion-card>
-  <ion-fab bottom right >
-  <button ion-fab><ion-icon name="add"></ion-icon></button>
-</ion-fab>
+  <ion-fab bottom right>
+    <button ion-fab (click)="navCreateClient()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>
