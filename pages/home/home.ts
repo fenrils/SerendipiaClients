@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ClientDetail } from '../client-detail/client-detail';
+import { CreateClient } from '../create-client/create-client';
 
 @Component({
   selector: 'page-home',
@@ -10,6 +10,6 @@ export class HomePage {
   constructor(public navCtrl: NavController) {}
 
   navCreateClient() {
-    this.navCtrl.push(ClientDetail);
+    this.navCtrl.push(CreateClient);
   }
 }

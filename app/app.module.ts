@@ -7,7 +7,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { ClientDetail } from '../pages/client-detail/client-detail';
+import { CreateClient } from '../pages/create-client/create-client';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     ContactPage,
     HomePage,
     TabsPage,
-    ClientDetail
+    CreateClient
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -27,7 +27,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     ContactPage,
     HomePage,
     TabsPage,
-    ClientDetail
+    CreateClient
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
