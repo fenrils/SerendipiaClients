@@ -6,6 +6,9 @@
 
 <ion-content>
   <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
+    <ion-list-header style="color: black !important">
+      Datos del cliente
+    </ion-list-header>
     <ion-item lines="full">
       <ion-label position="floating">Nombre</ion-label>
       <ion-input formControlName="name" type="text"></ion-input>
@@ -61,6 +64,15 @@
     >
       Number values allowed.
     </span>
+    <ion-list-header
+      style="
+        margin-top: 20px !important;
+        color: black !important;
+        border-top: 2px solid !important;
+      "
+    >
+      Datos de la sesión
+    </ion-list-header>
     <ion-item lines="full">
       <ion-label position="floating">Tipo de Sesion</ion-label>
       <ion-input formControlName="sesion" type="text"></ion-input>
@@ -73,6 +85,15 @@
         [value]="defaultDate"
       ></ion-datetime>
     </ion-item>
+    <ion-list-header
+      style="
+        margin-top: 20px !important;
+        color: black !important;
+        border-top: 2px solid !important;
+      "
+    >
+      Datos de facturación
+    </ion-list-header>
     <ion-item lines="full">
       <ion-label position="floating">Tarifa (€)</ion-label>
       <ion-input formControlName="sesion" type="text"></ion-input>
