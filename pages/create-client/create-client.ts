@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'page-contact',
-  templateUrl: 'create-client.html'
+  templateUrl: 'create-client.html',
 })
 export class CreateClient {
   myForm: FormGroup;
@@ -18,18 +18,21 @@ export class CreateClient {
         '',
         [
           Validators.required,
-          Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$')
-        ]
+          Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$'),
+        ],
       ],
       dob: [],
-      phone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]]
+      phone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      sesion: [],
+      tarifa: [],
+      reserva: [],
     });
   }
 
   fetchDate(e) {
     let date = new Date(e.target.value).toISOString().substring(0, 10);
     this.myForm.get('dob').setValue(date, {
-      onlyself: true
+      onlyself: true,
     });
   }
 
