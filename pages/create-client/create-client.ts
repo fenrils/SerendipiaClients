@@ -23,9 +23,9 @@ export class CreateClient {
       ],
       dob: [],
       phone: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
-      sesion: [],
-      tarifa: [],
-      reserva: [],
+      sesion: [''],
+      tarifa: [''],
+      reserva: [''],
     });
   }
 
