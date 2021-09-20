@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ClientsService } from '../../app/services/clients.service';
 
 @Component({
   selector: 'page-contact',
@@ -9,7 +10,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class CreateClient {
   myForm: FormGroup;
   submitted = false;
-  constructor(public navCtrl: NavController, public formBuilder: FormBuilder) {}
+  constructor(
+    public navCtrl: NavController,
+    public formBuilder: FormBuilder,
+    public clientsService: ClientsService
+  ) {}
 
   ngOnInit() {
     this.myForm = this.formBuilder.group({
@@ -46,7 +51,9 @@ export class CreateClient {
       console.log('All fields are required.');
       return false;
     } else {
-      console.log(this.myForm.value);
+      this.clientsService.addClient(this.myForm.value).subscribe((data) => {
+        console.log(data);
+      });
     }
   }
 }
