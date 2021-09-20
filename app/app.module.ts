@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { CreateClient } from '../pages/create-client/create-client';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClientsService } from './services/clients.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TabsPage,
     CreateClient,
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }],
+  providers: [
+    ClientsService,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
