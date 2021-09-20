@@ -1,9 +1,8 @@
 import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
-
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -18,13 +17,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactPage,
     HomePage,
     TabsPage,
-    CreateClient
+    CreateClient,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,9 +33,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactPage,
     HomePage,
     TabsPage,
-    CreateClient
+    CreateClient,
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
