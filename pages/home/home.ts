@@ -14,9 +14,9 @@ export class HomePage {
   ) {}
 
   ngOnInit() {
-    this.clientsService.getAllClients().subscribe((data) => {
-      console.log(data);
-    });
+    // this.clientsService.getAllClients().subscribe((data) => {
+    //   console.log(data);
+    // });
   }
 
   navCreateClient() {
