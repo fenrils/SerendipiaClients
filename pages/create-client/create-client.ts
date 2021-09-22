@@ -53,6 +53,7 @@ export class CreateClient {
     } else {
       this.clientsService.addClient(this.myForm.value).subscribe((data) => {
         console.log(data);
+        this.navCtrl.pop();
       });
     }
   }

@@ -14,4 +14,8 @@ export class ClientsService {
     let options = { headers: headers };
     return this.http.post('https://vtwhny.deta.dev/addClient/', user, options);
   }
+
+  getAllClients(): Observable<any> {
+    return this.http.get('https://vtwhny.deta.dev/getAllClients');
+  }
 }
