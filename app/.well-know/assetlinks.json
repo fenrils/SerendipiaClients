@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "net.inverline.bancosabadell.officelocator.android.sab.debug",
+    "sha256_cert_fingerprints":
+    ["B4:5A:B7:63:C6:80:10:62:95:AD:5F:0F:4D:18:C0:11:36:16:C5:4E:59:6F:8D:D6:6A:8B:2B:D9:D3:4A:53:B4"]
+  }
+}]
